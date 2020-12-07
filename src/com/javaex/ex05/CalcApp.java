@@ -10,7 +10,7 @@ public class CalcApp {
 		while (true) {
 			int a = 0, b = 0;
 			String ao = "";
-			
+
 			System.out.print(">>");
 
 			String str = sc.nextLine();
@@ -37,24 +37,20 @@ public class CalcApp {
 			Div div = new Div(); // 이렇게 사용하기엔 너무 길다
 			if (ao.equals("+")) {
 				add.setValue(a, b);
-				System.out.println(add.calculate());
+				System.out.println(">>" + add.calculate());
 				continue;
 			} else if (ao.equals("-")) {
 				sub.setValue(a, b);
-				System.out.println(sub.calculate());
+				System.out.println(">>" + sub.calculate());
 				continue;
 			} else if (ao.equals("*")) {
 				mul.setValue(a, b);
-				System.out.println(mul.calculate());
+				System.out.println(">>" + mul.calculate());
 				continue;
 			} else if (ao.equals("/")) {
 				div.setValue(a, b);
-				try {
-					System.out.println(div.calculate());
-					continue;
-				} catch (Exception e) {
-					continue;
-				}
+				System.out.println(">>" + div.calculate());
+				continue;
 			} else {
 				System.out.println("알수없는 연산입니다");
 				continue;
